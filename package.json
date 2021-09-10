@@ -1,0 +1,47 @@
+{
+  "name": "jarchi",
+  "license": "MIT",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Package that allows everyone to broadcast a message loudly from anywhere",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "homepage": "https://github.com/amirHossein-Ebrahimi/jarchi#readme",
+  "repository": {
+    "url": "github:amirHossein-Ebrahimi/jarchi"
+  },
+  "author": {
+    "name": "Amir.H Ebrahimi",
+    "email": "amirhosseinebrahimi77@gmail.com",
+    "url": "https://github.com/amirHossein-Ebrahimi"
+  },
+  "bugs": {
+    "url": "https://github.com/amirHossein-Ebrahimi/jarchi/issues"
+  },
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "prepublishOnly": "yarn build",
+    "clean": "rimraf lib",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.4.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.2"
+  },
+  "files": [
+    "/lib"
+  ],
+  "keywords": [
+    "web-share",
+    "share",
+    "pc",
+    "mobile"
+  ]
+}
