@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
