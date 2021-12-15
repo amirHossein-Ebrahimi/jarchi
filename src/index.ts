@@ -1,1 +1,1 @@
-export default () => console.log('test 2')
+export { shareViaTwitter } from './shares'
